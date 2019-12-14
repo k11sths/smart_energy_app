@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :smart_energy, SmartEnergy.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "number1111",
   database: "smart_energy_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
