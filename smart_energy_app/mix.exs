@@ -41,7 +41,8 @@ defmodule SmartEnergy.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:exrabbitmq, github: "StoiximanServices/exrabbitmq", tag: "v4.0.0", override: true}
     ]
   end
 

@@ -18,6 +18,32 @@ config :smart_energy, SmartEnergyWeb.Endpoint,
   render_errors: [view: SmartEnergyWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: SmartEnergy.PubSub, adapter: Phoenix.PubSub.PG2]
 
+config :exrabbitmq, :device_network_exchange,
+  queue: "",
+  consume_opts: [no_ack: false],
+  qos_opts: [prefetch_count: 1],
+  declarations: [
+    {:exchange,
+     [
+       name: "device_network_exchange",
+       type: :fanout,
+       opts: [durable: true]
+     ]},
+    {:queue,
+     [
+       name: "device_network_exchange",
+       opts: [auto_delete: false, durable: true],
+       bindings: [
+         [
+           exchange: "device_network_exchange",
+           opts: [
+             routing_key: "*"
+           ]
+         ]
+       ]
+     ]}
+  ]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

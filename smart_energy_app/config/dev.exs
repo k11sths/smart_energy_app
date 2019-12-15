@@ -9,6 +9,15 @@ config :smart_energy, SmartEnergy.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+# [rabbitmq config]
+config :exrabbitmq, :connection,
+  username: "guest",
+  password: "guest",
+  host: "localhost",
+  # port: 15672,
+  vhost: "/",
+  pool: [size: 2, max_overflow: 1]
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

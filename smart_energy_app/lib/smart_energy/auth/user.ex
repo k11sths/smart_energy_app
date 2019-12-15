@@ -19,7 +19,6 @@ defmodule SmartEnergy.Auth.User do
 
   @required_fields [:email, :password, :password_confirmation]
 
-  @doc false
   def changeset(user, attrs) do
     user
     |> cast(attrs, @required_fields)

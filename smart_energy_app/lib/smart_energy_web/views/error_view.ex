@@ -17,4 +17,8 @@ defmodule SmartEnergyWeb.ErrorView do
   def render("401.json", %{message: message}) do
     %{errors: %{detail: message}}
   end
+
+  def render("422.json", _) do
+    %{errors: %{detail: "DB Properties error"}}
+  end
 end

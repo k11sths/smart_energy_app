@@ -9,9 +9,12 @@ defmodule SmartEnergy.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
+      ExRabbitMQ.Connection.Pool.Supervisor,
       SmartEnergy.Repo,
       # Start the endpoint when the application starts
-      SmartEnergyWeb.Endpoint
+      SmartEnergyWeb.Endpoint,
+      SmartEnergy.Devices.Supervisor
+
       # Starts a worker by calling: SmartEnergy.Worker.start_link(arg)
       # {SmartEnergy.Worker, arg},
     ]
