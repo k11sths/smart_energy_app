@@ -2,7 +2,6 @@ defmodule SmartEnergy.Devices.Models.DevicePing do
   @moduledoc false
 
   alias __MODULE__
-  alias AssignmentBackend.TransactionProcessor.DB.CurrencyAccountTypes.ConstantsLoader
 
   defstruct [:device_id, :timestamp]
 

@@ -2,6 +2,7 @@ defmodule SmartEnergy.Auth.Backend.Authentication do
   alias SmartEnergy.Auth.Backend.Encryption
   alias SmartEnergy.Auth.User
   alias SmartEnergy.Repo
+  alias SmartEnergy.User.Manager, as: UserManager
 
   def sign_in(email, password) do
     user = Repo.get_by(User, email: String.downcase(email))
@@ -12,14 +13,14 @@ defmodule SmartEnergy.Auth.Backend.Authentication do
     end
   end
 
-  ## Helper functions for view
-
-  def current_user(conn) do
-    id = Plug.Conn.get_session(conn, :current_user)
-    if id, do: Repo.get(User, id)
+  def signed_in?(%{"session_guid" => session_guid}) do
+    case UserManager.get_user_worker(session_guid) do
+      {:ok, _worker_pid} -> true
+      _ -> false
+    end
   end
 
-  def logged_in?(conn), do: !!current_user(conn)
+  def signed_in?(_), do: false
 
   defp authenticate(user, password) do
     case user do

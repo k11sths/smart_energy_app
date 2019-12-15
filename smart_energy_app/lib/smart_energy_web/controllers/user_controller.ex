@@ -4,6 +4,7 @@ defmodule SmartEnergyWeb.UserController do
   alias SmartEnergy.Auth
   alias SmartEnergy.Auth.User
   alias SmartEnergy.Auth.Backend.Authentication
+  alias SmartEnergy.User.Manager, as: UserManager
 
   action_fallback SmartEnergyWeb.FallbackController
 
@@ -46,6 +47,9 @@ defmodule SmartEnergyWeb.UserController do
   def sign_in(conn, %{"email" => email, "password" => password}) do
     case Authentication.sign_in(email, password) do
       {:ok, user} ->
+        {:ok, session_guid} = UserManager.spawn_user_worker(user)
+        user = Map.put(user, :session_guid, session_guid)
+
         conn
         |> put_status(:ok)
         |> put_view(SmartEnergyWeb.UserView)

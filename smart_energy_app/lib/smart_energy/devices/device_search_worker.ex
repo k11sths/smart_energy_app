@@ -15,7 +15,7 @@ defmodule SmartEnergy.Devices.DeviceSearchWorker do
     GenServer.start_link(@module_name, %{}, name: @module_name)
   end
 
-  # def get_available_devices(), do: GenServer.cast(self(), :get_available_devices)
+  def get_available_devices(), do: GenServer.call(@module_name, :get_available_devices)
 
   def init(state) do
     new_state =
@@ -25,6 +25,10 @@ defmodule SmartEnergy.Devices.DeviceSearchWorker do
 
     new_state = Map.put_new(new_state, :available_devices, %{})
     {:ok, new_state}
+  end
+
+  def handle_call(:get_available_devices, _, %{available_devices: available_devices} = state) do
+    {:reply, available_devices, state}
   end
 
   def handle_info({:basic_consume_ok, %{consumer_tag: consumer_tag}}, state) do

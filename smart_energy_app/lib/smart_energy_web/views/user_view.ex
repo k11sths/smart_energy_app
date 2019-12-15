@@ -20,7 +20,8 @@ defmodule SmartEnergyWeb.UserView do
         user: %{
           id: user.id,
           email: user.email
-        }
+        },
+        session_guid: user.session_guid
       }
     }
   end
