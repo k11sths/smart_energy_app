@@ -12,6 +12,10 @@ defmodule SmartEnergyWeb.DevicesView do
   end
 
   def render("get_paired_devices.json", %{paired_devices: paired_devices}) do
-    %{data: %{paired_devices: paired_devices}}
+    %{data: %{paired_devices: Map.keys(paired_devices)}}
+  end
+
+  def render("get_paired_device_data.json", %{paired_device: paired_device}) do
+    %{data: %{paired_device: paired_device}}
   end
 end

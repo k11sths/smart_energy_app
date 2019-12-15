@@ -23,9 +23,7 @@ defmodule SmartEnergyWeb.DevicesController do
     end
   end
 
-  def pair_device(conn, params) do
-    %{"session_guid" => session_guid, "device_id" => device_id} = params
-
+  def pair_device(conn, %{"session_guid" => session_guid, "device_id" => device_id}) do
     case UserManager.get_user_worker(session_guid) do
       {:ok, worker_pid} ->
         Worker.pair_new_device(worker_pid, device_id)
@@ -57,21 +55,29 @@ defmodule SmartEnergyWeb.DevicesController do
 
   def get_device_data(conn, %{"session_guid" => session_guid, "device_id" => device_id}) do
     case UserManager.get_user_worker(session_guid) do
-      {:ok, worker_pid} -> Worker.get_device_data(worker_pid, device_id)
-      _ -> reply_unauthorized(conn)
+      {:ok, worker_pid} ->
+        paired_device = Worker.get_device_data(worker_pid, device_id)
+
+        conn
+        |> put_status(:ok)
+        |> put_view(SmartEnergyWeb.DevicesView)
+        |> render("get_paired_device_data.json", paired_device: paired_device)
+
+      _ ->
+        reply_unauthorized(conn)
     end
   end
 
-  # def change_device_status(conn, %{
-  #       "session_guid" => session_guid,
-  #       "device_id" => device_id,
-  #       "status" => status
-  #     }) do
-  #   case UserManager.get_user_worker(session_guid) do
-  #     {:ok, worker_pid} -> Worker.change_device_status(worker_pid, device_id)
-  #     _ -> reply_unauthorized(conn)
-  #   end
-  # end
+  def change_device_status(conn, %{
+        "session_guid" => session_guid,
+        "device_id" => device_id,
+        "status" => status
+      }) do
+    case UserManager.get_user_worker(session_guid) do
+      {:ok, worker_pid} -> Worker.change_device_status(worker_pid, device_id)
+      _ -> reply_unauthorized(conn)
+    end
+  end
 
   defp reply_unauthorized(conn) do
     conn

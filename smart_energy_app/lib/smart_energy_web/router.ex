@@ -15,7 +15,7 @@ defmodule SmartEnergyWeb.Router do
     get "/devices/pair/get", DevicesController, :get_paired_devices
     post "/devices/pair", DevicesController, :pair_device
 
-    # get "/device/get", DevicesController, :get_device_data
+    get "/device/get", DevicesController, :get_device_data
     # post "/device/status", DevicesController, :pair_device
   end
 end

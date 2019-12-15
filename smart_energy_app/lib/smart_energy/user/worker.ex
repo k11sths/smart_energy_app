@@ -22,6 +22,9 @@ defmodule SmartEnergy.User.Worker do
   def get_paired_devices(worker_pid),
     do: GenServer.call(worker_pid, :get_paired_devices)
 
+  def get_device_data(worker_pid, device_id),
+    do: GenServer.call(worker_pid, {:get_device_data, device_id})
+
   def init(args) do
     user_id = Keyword.get(args, :user_id)
     session_guid = Keyword.get(args, :session_guid)
@@ -45,5 +48,9 @@ defmodule SmartEnergy.User.Worker do
 
   def handle_call(:get_paired_devices, _, %{paired_devices: paired_devices} = state) do
     {:reply, paired_devices, state}
+  end
+
+  def handle_call({:get_device_data, device_id}, _, %{paired_devices: paired_devices} = state) do
+    {:reply, Map.get(paired_devices, device_id), state}
   end
 end
