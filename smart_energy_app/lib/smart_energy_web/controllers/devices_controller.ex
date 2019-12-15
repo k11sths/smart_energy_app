@@ -55,12 +55,12 @@ defmodule SmartEnergyWeb.DevicesController do
     end
   end
 
-  # def get_device_data(conn, %{"session_guid" => session_guid, "device_id" => device_id}) do
-  #   case UserManager.get_user_worker(session_guid) do
-  #     {:ok, worker_pid} -> Worker.get_device_data(worker_pid, device_id)
-  #     _ -> reply_unauthorized(conn)
-  #   end
-  # end
+  def get_device_data(conn, %{"session_guid" => session_guid, "device_id" => device_id}) do
+    case UserManager.get_user_worker(session_guid) do
+      {:ok, worker_pid} -> Worker.get_device_data(worker_pid, device_id)
+      _ -> reply_unauthorized(conn)
+    end
+  end
 
   # def change_device_status(conn, %{
   #       "session_guid" => session_guid,
