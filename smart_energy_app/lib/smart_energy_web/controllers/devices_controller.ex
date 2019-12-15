@@ -5,6 +5,8 @@ defmodule SmartEnergyWeb.DevicesController do
 
   alias SmartEnergy.Auth.Backend.Authentication
   alias SmartEnergy.Devices.DeviceSearchWorker
+  alias SmartEnergy.User.Manager, as: UserManager
+  alias SmartEnergy.User.Worker
 
   action_fallback SmartEnergyWeb.FallbackController
 
@@ -17,14 +19,64 @@ defmodule SmartEnergyWeb.DevicesController do
       |> put_view(SmartEnergyWeb.DevicesView)
       |> render("get_available_devices.json", get_available_devices: get_available_devices)
     else
-      conn
-      |> put_status(:unauthorized)
-      |> put_view(SmartEnergyWeb.ErrorView)
-      |> render("401.json", message: "Log in to get available devices!")
+      reply_unauthorized(conn)
     end
   end
 
   def pair_device(conn, params) do
-    # TODO: pair device in client's worker
+    %{"session_guid" => session_guid, "device_id" => device_id} = params
+
+    case UserManager.get_user_worker(session_guid) do
+      {:ok, worker_pid} ->
+        Worker.pair_new_device(worker_pid, device_id)
+
+        conn
+        |> put_status(:ok)
+        |> put_view(SmartEnergyWeb.DevicesView)
+        |> render("pair_device_success.json", device_id: device_id)
+
+      _ ->
+        reply_unauthorized(conn)
+    end
+  end
+
+  def get_paired_devices(conn, %{"session_guid" => session_guid}) do
+    case UserManager.get_user_worker(session_guid) do
+      {:ok, worker_pid} ->
+        paired_devices = Worker.get_paired_devices(worker_pid)
+
+        conn
+        |> put_status(:ok)
+        |> put_view(SmartEnergyWeb.DevicesView)
+        |> render("get_paired_devices.json", paired_devices: paired_devices)
+
+      _ ->
+        reply_unauthorized(conn)
+    end
+  end
+
+  # def get_device_data(conn, %{"session_guid" => session_guid, "device_id" => device_id}) do
+  #   case UserManager.get_user_worker(session_guid) do
+  #     {:ok, worker_pid} -> Worker.get_device_data(worker_pid, device_id)
+  #     _ -> reply_unauthorized(conn)
+  #   end
+  # end
+
+  # def change_device_status(conn, %{
+  #       "session_guid" => session_guid,
+  #       "device_id" => device_id,
+  #       "status" => status
+  #     }) do
+  #   case UserManager.get_user_worker(session_guid) do
+  #     {:ok, worker_pid} -> Worker.change_device_status(worker_pid, device_id)
+  #     _ -> reply_unauthorized(conn)
+  #   end
+  # end
+
+  defp reply_unauthorized(conn) do
+    conn
+    |> put_status(:unauthorized)
+    |> put_view(SmartEnergyWeb.ErrorView)
+    |> render("401.json", message: "Sign in required!")
   end
 end

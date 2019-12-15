@@ -12,6 +12,6 @@ defmodule SmartEnergyWeb.Router do
     post "/users/sign_in", UserController, :sign_in
 
     get "/devices/get", DevicesController, :get_available_devices
-    get "/devices/pair", DevicesController, :pair_device
+    post "/devices/pair", DevicesController, :pair_device
   end
 end
