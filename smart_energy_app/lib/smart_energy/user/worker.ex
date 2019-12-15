@@ -3,7 +3,10 @@ defmodule SmartEnergy.User.Worker do
 
   use GenServer
 
+  import Application
+
   alias SmartEnergy.Registry
+  alias SmartEnergy.Devices.DeviceProducer
 
   @module_name __MODULE__
 
@@ -25,6 +28,9 @@ defmodule SmartEnergy.User.Worker do
   def get_device_data(worker_pid, device_id),
     do: GenServer.call(worker_pid, {:get_device_data, device_id})
 
+  def change_device_status(worker_pid, device_id, status),
+    do: GenServer.call(worker_pid, {:change_device_status, device_id, status})
+
   def init(args) do
     user_id = Keyword.get(args, :user_id)
     session_guid = Keyword.get(args, :session_guid)
@@ -37,13 +43,41 @@ defmodule SmartEnergy.User.Worker do
 
     paired_devices =
       if Map.get(paired_devices, device_id) === nil do
-        # TODO: pairing handshake? RPC
-        Map.put(paired_devices, device_id, %{consumption: 0, state: nil})
+        # TODO: pairing handshake? RPC / know the adress/queue that I publish
+        Map.put(paired_devices, device_id, %{
+          consumption: nil,
+          status: nil,
+          queue: get_devices_queue()
+        })
       else
         paired_devices
       end
 
     {:noreply, %{state | paired_devices: paired_devices}}
+  end
+
+  def handle_call({:change_device_status, device_id, status}, _, state) do
+    %{paired_devices: paired_devices} = state
+
+    paired_devices =
+      case Map.get(paired_devices, device_id) do
+        nil ->
+          paired_devices
+
+        paired_device_data ->
+          # TODO: constants loader for device statuses
+          if DeviceProducer.publish(
+               %{message: "UpdateStatus", payload: %{status: status}},
+               paired_device_data.queue
+             ) === {:ok, false} do
+            Map.put(paired_devices, device_id, %{paired_device_data | status: status})
+          else
+            paired_devices
+          end
+      end
+
+    state = %{state | paired_devices: paired_devices}
+    {:reply, Map.get(paired_devices, device_id), %{state | paired_devices: paired_devices}}
   end
 
   def handle_call(:get_paired_devices, _, %{paired_devices: paired_devices} = state) do
@@ -53,4 +87,6 @@ defmodule SmartEnergy.User.Worker do
   def handle_call({:get_device_data, device_id}, _, %{paired_devices: paired_devices} = state) do
     {:reply, Map.get(paired_devices, device_id), state}
   end
+
+  defp get_devices_queue(), do: get_env(:exrabbitmq, :devices, [])[:devices_queue_in]
 end

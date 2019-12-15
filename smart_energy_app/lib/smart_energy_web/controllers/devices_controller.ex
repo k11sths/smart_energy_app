@@ -8,6 +8,7 @@ defmodule SmartEnergyWeb.DevicesController do
   alias SmartEnergy.User.Manager, as: UserManager
   alias SmartEnergy.User.Worker
 
+
   action_fallback SmartEnergyWeb.FallbackController
 
   def get_available_devices(conn, params) do
@@ -74,8 +75,19 @@ defmodule SmartEnergyWeb.DevicesController do
         "status" => status
       }) do
     case UserManager.get_user_worker(session_guid) do
-      {:ok, worker_pid} -> Worker.change_device_status(worker_pid, device_id)
-      _ -> reply_unauthorized(conn)
+      {:ok, worker_pid} ->
+        paired_device_data = Worker.change_device_status(worker_pid, device_id, status)
+
+        conn
+        |> put_status(:ok)
+        |> put_view(SmartEnergyWeb.DevicesView)
+        |> render("change_device_status.json",
+          device_id: device_id,
+          status: Map.get(paired_device_data, :status)
+        )
+
+      _ ->
+        reply_unauthorized(conn)
     end
   end
 

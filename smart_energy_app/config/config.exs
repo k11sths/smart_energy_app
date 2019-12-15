@@ -31,7 +31,7 @@ config :exrabbitmq, :device_network_exchange,
      ]},
     {:queue,
      [
-       name: "device_network_exchange",
+       name: "device_network_queue",
        opts: [auto_delete: false, durable: true],
        bindings: [
          [
@@ -43,6 +43,8 @@ config :exrabbitmq, :device_network_exchange,
        ]
      ]}
   ]
+
+config :exrabbitmq, :devices, devices_queue_in: "devices_queue_in"
 
 # Configures Elixir's Logger
 config :logger, :console,

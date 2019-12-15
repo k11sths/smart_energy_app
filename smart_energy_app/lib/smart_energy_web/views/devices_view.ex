@@ -18,4 +18,8 @@ defmodule SmartEnergyWeb.DevicesView do
   def render("get_paired_device_data.json", %{paired_device: paired_device}) do
     %{data: %{paired_device: paired_device}}
   end
+
+  def render("change_device_status.json", %{device_id: device_id, status: status}) do
+    %{data: %{new_status: status, device_id: device_id}}
+  end
 end

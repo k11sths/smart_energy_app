@@ -15,8 +15,8 @@ defmodule SmartEnergy.Application do
       # Start the endpoint when the application starts
       SmartEnergyWeb.Endpoint,
       SmartEnergy.Devices.Supervisor,
-      SmartEnergy.User.Supervisor
-
+      SmartEnergy.User.Supervisor,
+      SmartEnergy.Devices.DeviceProducer
       # Starts a worker by calling: SmartEnergy.Worker.start_link(arg)
       # {SmartEnergy.Worker, arg},
     ]
