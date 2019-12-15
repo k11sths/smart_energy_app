@@ -5286,3 +5286,584 @@ Ranch listener 'Elixir.SmartEnergyWeb.Endpoint.HTTP', connection process <0.544.
      Reason:     {bad_return_value,#{<<"CDC2345FSG">> => #{consumption => 0,status => <<"1">>}}}
      Offender:   [{pid,<0.554.0>},{id,undefined},{mfargs,{'Elixir.SmartEnergy.User.Worker',start_link,[[{key,<<"b49b15d0-dcc9-4141-8816-91685a49782d">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},{session_guid,<<"b49b15d0-dcc9-4141-8816-91685a49782d">>}]]}},{restart_type,transient},{shutdown,5000},{child_type,worker}]
 
+2019-12-15 23:19:06 =ERROR REPORT====
+** Generic server {'Elixir.SmartEnergy.Registry',<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>} terminating 
+** Last message in was {'$gen_cast',{pair_new_device,<<"CDC2345FSG">>}}
+** When Server state == #{paired_devices => #{},session_guid => <<"c0455a96-135a-42f4-bd9f-caabd122afeb">>,user_id => <<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>}
+** Reason for termination == 
+** {badarg,[{ets,lookup,[smart_energy_device_pubsub,subscribe],[]},{'Elixir.Phoenix.PubSub',call,3,[{file,"lib/phoenix/pubsub.ex"},{line,288}]},{'Elixir.SmartEnergy.User.Worker',handle_cast,2,[{file,"lib/smart_energy/user/worker.ex"},{line,42}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:19:06 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.User.Worker:init/1
+    pid: <0.572.0>
+    registered_name: []
+    exception error: bad argument: [{ets,lookup,[smart_energy_device_pubsub,subscribe],[]},{'Elixir.Phoenix.PubSub',call,3,[{file,"lib/phoenix/pubsub.ex"},{line,288}]},{'Elixir.SmartEnergy.User.Worker',handle_cast,2,[{file,"lib/smart_energy/user/worker.ex"},{line,42}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.SmartEnergy.User.Supervisor','Elixir.SmartEnergy.Supervisor',<0.391.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.562.0>,<0.395.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 6927
+  neighbours:
+2019-12-15 23:19:06 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.User.Supervisor'}
+     Context:    child_terminated
+     Reason:     {badarg,[{ets,lookup,[smart_energy_device_pubsub,subscribe],[]},{'Elixir.Phoenix.PubSub',call,3,[{file,"lib/phoenix/pubsub.ex"},{line,288}]},{'Elixir.SmartEnergy.User.Worker',handle_cast,2,[{file,"lib/smart_energy/user/worker.ex"},{line,42}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.572.0>},{id,undefined},{mfargs,{'Elixir.SmartEnergy.User.Worker',start_link,[[{key,<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},{session_guid,<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>}]]}},{restart_type,transient},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:19:23 =ERROR REPORT====
+** Generic server {'Elixir.SmartEnergy.Registry',<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>} terminating 
+** Last message in was {'$gen_cast',{pair_new_device,<<"CDC2345FSG">>}}
+** When Server state == #{paired_devices => #{},session_guid => <<"c0455a96-135a-42f4-bd9f-caabd122afeb">>,user_id => <<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>}
+** Reason for termination == 
+** {badarg,[{ets,lookup,[smart_energy_device_pubsub,subscribe],[]},{'Elixir.Phoenix.PubSub',call,3,[{file,"lib/phoenix/pubsub.ex"},{line,288}]},{'Elixir.SmartEnergy.User.Worker',handle_cast,2,[{file,"lib/smart_energy/user/worker.ex"},{line,42}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:19:23 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.User.Worker:init/1
+    pid: <0.576.0>
+    registered_name: []
+    exception error: bad argument: [{ets,lookup,[smart_energy_device_pubsub,subscribe],[]},{'Elixir.Phoenix.PubSub',call,3,[{file,"lib/phoenix/pubsub.ex"},{line,288}]},{'Elixir.SmartEnergy.User.Worker',handle_cast,2,[{file,"lib/smart_energy/user/worker.ex"},{line,42}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.SmartEnergy.User.Supervisor','Elixir.SmartEnergy.Supervisor',<0.391.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.562.0>,<0.395.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 6903
+  neighbours:
+2019-12-15 23:19:23 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.User.Supervisor'}
+     Context:    child_terminated
+     Reason:     {badarg,[{ets,lookup,[smart_energy_device_pubsub,subscribe],[]},{'Elixir.Phoenix.PubSub',call,3,[{file,"lib/phoenix/pubsub.ex"},{line,288}]},{'Elixir.SmartEnergy.User.Worker',handle_cast,2,[{file,"lib/smart_energy/user/worker.ex"},{line,42}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.576.0>},{id,undefined},{mfargs,{'Elixir.SmartEnergy.User.Worker',start_link,[[{key,<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},{session_guid,<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>}]]}},{restart_type,transient},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-TaQUMaMkui3nMEsR6tnEpw">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 2,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => false,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{<<"CDC2345FSG">> => 1234561}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.515.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.514.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337345.138369>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.543.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.540.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 23703
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.515.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-_fkl84bJuxi1CyfjhVX0eg">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.565.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.514.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337345.140114>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.569.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.566.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.565.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-R9nJjGOm3dXS-Yi3aSS4bw">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.572.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.514.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337345.140163>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.576.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.573.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.572.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-tXAO4VPmQXz3DQJHk0OS4w">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.579.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.514.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337345.140207>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.583.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.580.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.579.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.579.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Supervisor'}
+     Context:    child_terminated
+     Reason:     shutdown
+     Offender:   [{pid,<0.514.0>},{id,'Elixir.SmartEnergy.Devices.Supervisor'},{mfargs,{'Elixir.SmartEnergy.Devices.Supervisor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-UpNKqXuBM3yKSrEuWPhOcw">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.587.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.586.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337346.136621>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.591.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.588.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.587.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-sxd8b8COBsCavT-_lPPO7Q">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.594.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.586.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337346.136678>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.598.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.595.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22730
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.594.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-YO7-Ee-yHv64w0B3LOWvQw">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.601.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.586.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337346.136714>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.605.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.602.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22734
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.601.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-Q5pZlj-n1sIVx6DXCTEjDQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.608.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.586.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337348.136773>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.612.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.609.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.608.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.608.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Supervisor'}
+     Context:    child_terminated
+     Reason:     shutdown
+     Offender:   [{pid,<0.586.0>},{id,'Elixir.SmartEnergy.Devices.Supervisor'},{mfargs,{'Elixir.SmartEnergy.Devices.Supervisor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-I79OrCUAl3xnrEQ-ZU20IA">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.616.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.615.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337348.136813>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.620.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.617.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22730
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.616.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-tA_re0df7imiBWYspUh1dQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.623.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.615.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337348.136875>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.627.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.624.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.623.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag--EODtiHvdwmIctgdyfi9pA">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.630.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.615.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337345.140487>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.634.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.631.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.630.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-gK9mE5sekxNYqoysF31RZg">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.637.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.615.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337348.136928>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.641.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.638.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.637.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.637.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Supervisor'}
+     Context:    child_terminated
+     Reason:     shutdown
+     Offender:   [{pid,<0.615.0>},{id,'Elixir.SmartEnergy.Devices.Supervisor'},{mfargs,{'Elixir.SmartEnergy.Devices.Supervisor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-0DJOrnnjw7eij67qXTvaUg">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.645.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.644.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337346.136770>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.649.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.646.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22734
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.645.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-F_oxOwtWDZdCdnhv_-JhgQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.652.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.644.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337346.136797>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.656.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.653.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22725
+  neighbours:
+2019-12-15 23:22:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.652.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:22:54 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\", \"statusChange\": 2}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-ehBEUo-7iycTQCsG-wNPBQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"StatusChange">>,user_id => undefined}}
+** When Server state == #{available_devices => #{}}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:22:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.659.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {undef,[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.644.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.1307372753.865337345.140665>},{gen_server_call_timeout,60000},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.663.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{xrmq_channel_ripper_pid,<0.660.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22726
+  neighbours:
+2019-12-15 23:24:50 =ERROR REPORT====
+** Generic server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminating 
+** Last message in was {basic_deliver,<<"{\"deviceId\": \"CDC2345FSG\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-_M5J7yI_C2_GaW6tarH3xQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 2,exchange => <<"device_network_exchange">>,expiration => undefined,headers => [],message_id => undefined,persistent => true,priority => undefined,redelivered => false,reply_to => undefined,routing_key => <<>>,timestamp => 1234561,type => <<"Ping">>,user_id => undefined}}
+** When Server state == ok
+** Reason for termination == 
+** {{badmatch,ok},[{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',actions_based_on_device_message,2,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,66}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,51}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-12-15 23:24:50 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.Devices.DeviceSearchWorker:init/1
+    pid: <0.515.0>
+    registered_name: 'Elixir.SmartEnergy.Devices.DeviceSearchWorker'
+    exception error: {{badmatch,ok},[{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',actions_based_on_device_message,2,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,66}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,51}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.Devices.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.514.0>,<0.520.0>]
+    dictionary: [{xrmq_channel_monitor,#Ref<0.4030865413.3550478340.97625>},{xrmq_channel,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.527.0>},pid => <0.543.0>}},{xrmq_session_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Session',consume_opts => [{no_ack,false}],declarations => [{exchange,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Exchange',bindings => [],name => <<"device_network_exchange">>,opts => [{durable,true}],type => fanout}},{queue,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Queue',bindings => [#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Bind',exchange => <<"device_network_exchange">>,name => nil,opts => [{routing_key,<<"*">>}],type => nil}],name => <<"device_network_queue">>,name_prefix => nil,opts => [{auto_delete,false},{durable,true}]}}],qos_opts => [{prefetch_count,1}],queue => <<"device_network_queue">>}},{xrmq_connection_config,#{'__struct__' => 'Elixir.ExRabbitMQ.Config.Connection',cleanup_after => 5000,client_properties => [],heartbeat => 20,host => <<"localhost">>,max_channels => 65535,password => <<"guest">>,pool => #{'__struct__' => 'Elixir.ExRabbitMQ.Config.Pool',max_overflow => 1,size => 2,strategy => weighted},port => 5672,reconnect_after => 2000,username => <<"guest">>,vhost => <<"/">>}},{gen_server_call_timeout,60000},{xrmq_channel_ripper_pid,<0.540.0>},{xrmq_connection_status_key,connected},{xrmq_connection_pid,<0.520.0>}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 22105
+  neighbours:
+2019-12-15 23:24:50 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.Devices.Supervisor'}
+     Context:    child_terminated
+     Reason:     {{badmatch,ok},[{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',actions_based_on_device_message,2,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,66}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,51}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib/ex_rabbit_m_q/a_s_t/consumer/gen_server.ex"},{line,28}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.515.0>},{id,'Elixir.SmartEnergy.Devices.DeviceSearchWorker'},{mfargs,{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-15 23:25:18 =ERROR REPORT====
+** Generic server {'Elixir.SmartEnergy.Registry',<<"7dba0e17-276a-4e06-8d37-5e6d90e94be9">>} terminating 
+** Last message in was {device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}}
+** When Server state == #{paired_devices => #{<<"CDC2345FSG">> => #{consumption => nil,queue => <<"devices_queue_in">>,status => nil}},session_guid => <<"7dba0e17-276a-4e06-8d37-5e6d90e94be9">>,user_id => <<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>}
+** Reason for termination == 
+** {bad_return_value,{device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}}}
+2019-12-15 23:25:18 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.SmartEnergy.User.Worker:init/1
+    pid: <0.563.0>
+    registered_name: []
+    exception exit: {{bad_return_value,{device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}}},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,755}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.SmartEnergy.User.Supervisor','Elixir.SmartEnergy.Supervisor',<0.360.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.546.0>,<0.380.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 5536
+  neighbours:
+2019-12-15 23:25:18 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.SmartEnergy.User.Supervisor'}
+     Context:    child_terminated
+     Reason:     {bad_return_value,{device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}}}
+     Offender:   [{pid,<0.563.0>},{id,undefined},{mfargs,{'Elixir.SmartEnergy.User.Worker',start_link,[[{key,<<"7dba0e17-276a-4e06-8d37-5e6d90e94be9">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},{session_guid,<<"7dba0e17-276a-4e06-8d37-5e6d90e94be9">>}]]}},{restart_type,transient},{shutdown,5000},{child_type,worker}]
+

@@ -5,8 +5,10 @@ defmodule SmartEnergy.User.Worker do
 
   import Application
 
-  alias SmartEnergy.Registry
   alias SmartEnergy.Devices.DeviceProducer
+  alias SmartEnergy.PubSub
+  alias SmartEnergy.Registry
+  alias SmartEnergy.Devices.Models.{ConsumptionUpdate, StatusChange}
 
   @module_name __MODULE__
 
@@ -38,12 +40,13 @@ defmodule SmartEnergy.User.Worker do
   end
 
   def handle_cast({:pair_new_device, device_id}, state) do
-    # TODO: pubsub
+    PubSub.subscribe_device_updates(device_id)
     %{paired_devices: paired_devices} = state
 
     paired_devices =
       if Map.get(paired_devices, device_id) === nil do
-        # TODO: pairing handshake? RPC / know the adress/queue that I publish
+        # TODO: pairing handshake? RPC /
+        # to know the current state of the device and the adress/queue that I communicate with it
         Map.put(paired_devices, device_id, %{
           consumption: nil,
           status: nil,
@@ -86,6 +89,43 @@ defmodule SmartEnergy.User.Worker do
 
   def handle_call({:get_device_data, device_id}, _, %{paired_devices: paired_devices} = state) do
     {:reply, Map.get(paired_devices, device_id), state}
+  end
+
+  def handle_info(
+        {:device_update, %ConsumptionUpdate{device_id: device_id, consumption: consumption}},
+        state
+      ) do
+    %{paired_devices: paired_devices} = state
+
+    paired_devices =
+      case Map.get(paired_devices, device_id) do
+        nil ->
+          paired_devices
+
+        paired_device_data ->
+          Map.put(paired_devices, device_id, %{paired_device_data | consumption: consumption})
+      end
+
+    {:noreply, %{state | paired_devices: paired_devices}}
+  end
+
+  def handle_info({:device_update, %StatusChange{device_id: device_id, status: status}}, state) do
+    %{paired_devices: paired_devices} = state
+
+    paired_devices =
+      case Map.get(paired_devices, device_id) do
+        nil ->
+          paired_devices
+
+        paired_device_data ->
+          Map.put(paired_devices, device_id, %{paired_device_data | status: status})
+      end
+
+    {:noreply, %{state | paired_devices: paired_devices}}
+  end
+
+  def handle_info(_, state) do
+    {:noreply, state}
   end
 
   defp get_devices_queue(), do: get_env(:exrabbitmq, :devices, [])[:devices_queue_in]

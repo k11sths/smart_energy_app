@@ -2015,3 +2015,227 @@
 2019-12-15 22:34:44.843 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
 2019-12-15 22:34:44.845 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
 2019-12-15 22:34:45.193 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:18:11.062 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:18:11.082 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:18:11.113 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:18:11.129 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:18:11.139 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:18:11.160 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:18:11.171 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:18:11.342 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:18:11.342 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:18:11.349 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:18:11.352 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:18:11.352 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:18:11.366 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:18:11.376 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:18:11.401 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:18:11.424 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:18:11.445 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:18:11.446 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:18:11.465 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:18:11.470 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:18:11.476 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:18:11.480 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:18:11.932 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:19:06.092 [error] <0.572.0>@Elixir.Phoenix.PubSub:call:288 gen_server {'Elixir.SmartEnergy.Registry',<<99,48,52,53,53,97,57,54,45,49,51,53,97,45,52,50,102,52,45,98,100,57,102,45,99,97,97,98,100,49,50,50,97,102,101,98>>} terminated with reason: bad argument in call to ets:lookup(smart_energy_device_pubsub, subscribe) in 'Elixir.Phoenix.PubSub':call/3 line 288
+2019-12-15 23:19:06.099 [error] <0.572.0>@Elixir.Phoenix.PubSub:call:288 CRASH REPORT Process <0.572.0> with 0 neighbours crashed with reason: bad argument in call to ets:lookup(smart_energy_device_pubsub, subscribe) in 'Elixir.Phoenix.PubSub':call/3 line 288
+2019-12-15 23:19:06.099 [error] <0.562.0>@Elixir.Phoenix.PubSub:call:288 Supervisor 'Elixir.SmartEnergy.User.Supervisor' had child undefined started with 'Elixir.SmartEnergy.User.Worker':start_link([{key,<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},...]) at <0.572.0> exit with reason bad argument in call to ets:lookup(smart_energy_device_pubsub, subscribe) in 'Elixir.Phoenix.PubSub':call/3 line 288 in context child_terminated
+2019-12-15 23:19:23.301 [error] <0.576.0>@Elixir.Phoenix.PubSub:call:288 gen_server {'Elixir.SmartEnergy.Registry',<<99,48,52,53,53,97,57,54,45,49,51,53,97,45,52,50,102,52,45,98,100,57,102,45,99,97,97,98,100,49,50,50,97,102,101,98>>} terminated with reason: bad argument in call to ets:lookup(smart_energy_device_pubsub, subscribe) in 'Elixir.Phoenix.PubSub':call/3 line 288
+2019-12-15 23:19:23.302 [error] <0.576.0>@Elixir.Phoenix.PubSub:call:288 CRASH REPORT Process <0.576.0> with 0 neighbours crashed with reason: bad argument in call to ets:lookup(smart_energy_device_pubsub, subscribe) in 'Elixir.Phoenix.PubSub':call/3 line 288
+2019-12-15 23:19:23.302 [error] <0.562.0>@Elixir.Phoenix.PubSub:call:288 Supervisor 'Elixir.SmartEnergy.User.Supervisor' had child undefined started with 'Elixir.SmartEnergy.User.Worker':start_link([{key,<<"c0455a96-135a-42f4-bd9f-caabd122afeb">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},...]) at <0.576.0> exit with reason bad argument in call to ets:lookup(smart_energy_device_pubsub, subscribe) in 'Elixir.Phoenix.PubSub':call/3 line 288 in context child_terminated
+2019-12-15 23:21:24.232 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:21:24.251 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:21:24.282 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:21:24.299 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:21:24.310 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:21:24.331 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:21:24.341 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:21:24.508 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:21:24.508 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:21:24.517 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:21:24.520 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:21:24.520 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:21:24.533 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:21:24.542 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:21:24.565 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:21:24.595 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:21:24.616 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:21:24.618 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:21:24.640 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:21:24.648 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:21:24.650 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:21:24.654 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:21:25.168 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:22:54.414 [error] <0.515.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.426 [error] <0.515.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.426 [error] <0.514.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.515.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.438 [error] <0.565.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.438 [error] <0.565.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.439 [error] <0.514.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.565.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.450 [error] <0.572.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.451 [error] <0.572.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.451 [error] <0.514.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.572.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.462 [error] <0.579.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.462 [error] <0.579.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.463 [error] <0.514.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.579.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.463 [error] <0.514.0> Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.579.0> exit with reason reached_max_restart_intensity in context shutdown
+2019-12-15 23:22:54.463 [error] <0.361.0> Supervisor 'Elixir.SmartEnergy.Supervisor' had child 'Elixir.SmartEnergy.Devices.Supervisor' started with 'Elixir.SmartEnergy.Devices.Supervisor':start_link([]) at <0.514.0> exit with reason shutdown in context child_terminated
+2019-12-15 23:22:54.472 [error] <0.587.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.473 [error] <0.587.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.473 [error] <0.586.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.587.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.482 [error] <0.594.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.483 [error] <0.594.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.483 [error] <0.586.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.594.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.492 [error] <0.601.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.493 [error] <0.601.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.493 [error] <0.586.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.601.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.501 [error] <0.608.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.502 [error] <0.608.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.502 [error] <0.586.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.608.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.502 [error] <0.586.0> Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.608.0> exit with reason reached_max_restart_intensity in context shutdown
+2019-12-15 23:22:54.502 [error] <0.361.0> Supervisor 'Elixir.SmartEnergy.Supervisor' had child 'Elixir.SmartEnergy.Devices.Supervisor' started with 'Elixir.SmartEnergy.Devices.Supervisor':start_link([]) at <0.586.0> exit with reason shutdown in context child_terminated
+2019-12-15 23:22:54.511 [error] <0.616.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.512 [error] <0.616.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.512 [error] <0.615.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.616.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.521 [error] <0.623.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.522 [error] <0.623.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.522 [error] <0.615.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.623.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.531 [error] <0.630.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.531 [error] <0.630.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.531 [error] <0.615.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.630.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.540 [error] <0.637.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.540 [error] <0.637.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.541 [error] <0.615.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.637.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.541 [error] <0.615.0> Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.637.0> exit with reason reached_max_restart_intensity in context shutdown
+2019-12-15 23:22:54.541 [error] <0.361.0> Supervisor 'Elixir.SmartEnergy.Supervisor' had child 'Elixir.SmartEnergy.Devices.Supervisor' started with 'Elixir.SmartEnergy.Devices.Supervisor':start_link([]) at <0.615.0> exit with reason shutdown in context child_terminated
+2019-12-15 23:22:54.549 [error] <0.645.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.549 [error] <0.645.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.550 [error] <0.644.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.645.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.559 [error] <0.652.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.559 [error] <0.652.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:54.559 [error] <0.644.0>@Elixir.StatusChange:parse Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.652.0> exit with reason call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561) in context child_terminated
+2019-12-15 23:22:54.567 [error] <0.659.0> gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: {'module could not be loaded',[{'Elixir.StatusChange',parse,[#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2},1234561],[]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker.Backend',parse,2,[{file,"lib/smart_energy/devices/device_search_worker/backend.ex"},{line,25}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',xrmq_basic_deliver,3,[{file,"lib/smart_energy/devices/device_search_worker.ex"},{line,50}]},{'Elixir.SmartEnergy.Devices.DeviceSearchWorker',handle_info,2,[{file,"lib..."},...]},...]}
+2019-12-15 23:22:54.567 [error] <0.659.0>@Elixir.StatusChange:parse CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: call to undefined function 'Elixir.StatusChange':parse(#{<<"deviceId">> => <<"CDC2345FSG">>,<<"statusChange">> => 2}, 1234561)
+2019-12-15 23:22:55.152 [warning] <0.272.0> lager_error_logger_h dropped 20 messages in the last second that exceeded the limit of 50 messages/sec
+2019-12-15 23:24:46.508 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:24:46.523 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:24:46.554 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:24:46.568 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:24:46.576 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:24:46.590 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:24:46.598 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:24:46.741 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:24:46.741 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:24:46.749 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:24:46.752 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:24:46.752 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:24:46.766 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:24:46.774 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:24:46.790 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:24:46.802 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:24:46.816 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:24:46.818 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:24:46.832 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:24:46.838 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:24:46.840 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:24:46.842 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:24:47.218 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:24:50.271 [error] <0.515.0>@Elixir.SmartEnergy.Devices.DeviceSearchWorker:actions_based_on_device_message:66 gen_server 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' terminated with reason: no match of right hand value ok in 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':actions_based_on_device_message/2 line 66
+2019-12-15 23:24:50.284 [error] <0.515.0>@Elixir.SmartEnergy.Devices.DeviceSearchWorker:actions_based_on_device_message:66 CRASH REPORT Process 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' with 0 neighbours crashed with reason: no match of right hand value ok in 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':actions_based_on_device_message/2 line 66
+2019-12-15 23:24:50.284 [error] <0.514.0>@Elixir.SmartEnergy.Devices.DeviceSearchWorker:actions_based_on_device_message:66 Supervisor 'Elixir.SmartEnergy.Devices.Supervisor' had child 'Elixir.SmartEnergy.Devices.DeviceSearchWorker' started with 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':start_link([]) at <0.515.0> exit with reason no match of right hand value ok in 'Elixir.SmartEnergy.Devices.DeviceSearchWorker':actions_based_on_device_message/2 line 66 in context child_terminated
+2019-12-15 23:25:18.493 [error] <0.563.0> gen_server {'Elixir.SmartEnergy.Registry',<<55,100,98,97,48,101,49,55,45,50,55,54,97,45,52,101,48,54,45,56,100,51,55,45,53,101,54,100,57,48,101,57,52,98,101,57>>} terminated with reason: bad return value: {device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}}
+2019-12-15 23:25:18.493 [error] <0.563.0>@gen_server:handle_common_reply:755 CRASH REPORT Process <0.563.0> with 0 neighbours exited with reason: bad return value: {device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}} in gen_server:handle_common_reply/8 line 755
+2019-12-15 23:25:18.493 [error] <0.546.0> Supervisor 'Elixir.SmartEnergy.User.Supervisor' had child undefined started with 'Elixir.SmartEnergy.User.Worker':start_link([{key,<<"7dba0e17-276a-4e06-8d37-5e6d90e94be9">>},{user_id,<<"f566caf1-cef9-4d11-a1e0-620a4aa67f56">>},...]) at <0.563.0> exit with reason bad return value: {device_update,#{'__struct__' => 'Elixir.SmartEnergy.Devices.Models.StatusChange',device_id => <<"CDC2345FSG">>,status_change => 2,timestamp => 1234561}} in context child_terminated
+2019-12-15 23:31:20.460 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:31:20.476 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:31:20.515 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:31:20.532 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:31:20.541 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:31:20.560 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:31:20.568 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:31:20.726 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:31:20.726 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:31:20.735 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:31:20.740 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:31:20.740 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:31:20.757 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:31:20.766 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:31:20.796 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:31:20.813 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:31:20.834 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:31:20.835 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:31:20.857 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:31:20.864 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:31:20.866 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:31:20.869 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:31:21.402 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:35:38.577 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:35:38.596 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:35:38.633 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:35:38.646 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:35:38.654 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:35:38.677 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:35:38.685 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:35:38.853 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:35:38.854 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:35:38.861 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:35:38.864 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:35:38.864 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:35:38.878 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:35:38.885 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:35:38.907 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:35:38.926 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:35:38.945 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:35:38.946 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:35:38.962 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:35:38.966 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:35:38.968 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:35:38.971 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:35:39.506 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:36:52.639 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:36:52.655 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:36:52.686 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:36:52.700 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:36:52.708 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:36:52.723 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:36:52.732 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:36:52.880 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:36:52.880 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:36:52.889 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:36:52.891 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:36:52.891 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:36:52.907 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:36:52.917 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:36:52.940 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:36:52.951 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:36:52.968 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:36:52.970 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:36:53.002 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:36:53.018 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:36:53.024 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:36:53.027 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:36:53.467 [info] <0.43.0> Application smart_energy started on node nonode@nohost
+2019-12-15 23:40:15.233 [info] <0.43.0> Application lager started on node nonode@nohost
+2019-12-15 23:40:15.249 [info] <0.43.0> Application xmerl started on node nonode@nohost
+2019-12-15 23:40:15.277 [info] <0.43.0> Application sasl started on node nonode@nohost
+2019-12-15 23:40:15.290 [info] <0.43.0> Application tools started on node nonode@nohost
+2019-12-15 23:40:15.298 [info] <0.43.0> Application jsx started on node nonode@nohost
+2019-12-15 23:40:15.311 [info] <0.43.0> Application ranch started on node nonode@nohost
+2019-12-15 23:40:15.319 [info] <0.43.0> Application recon started on node nonode@nohost
+2019-12-15 23:40:15.457 [info] <0.43.0> Application credentials_obfuscation started on node nonode@nohost
+2019-12-15 23:40:15.457 [info] <0.43.0> Application rabbit_common started on node nonode@nohost
+2019-12-15 23:40:15.464 [info] <0.43.0> Application amqp_client started on node nonode@nohost
+2019-12-15 23:40:15.467 [info] <0.43.0> Application amqp started on node nonode@nohost
+2019-12-15 23:40:15.467 [info] <0.43.0> Application exrabbitmq started on node nonode@nohost
+2019-12-15 23:40:15.479 [info] <0.43.0> Application connection started on node nonode@nohost
+2019-12-15 23:40:15.488 [info] <0.43.0> Application decimal started on node nonode@nohost
+2019-12-15 23:40:15.504 [info] <0.43.0> Application db_connection started on node nonode@nohost
+2019-12-15 23:40:15.515 [info] <0.43.0> Application postgrex started on node nonode@nohost
+2019-12-15 23:40:15.529 [info] <0.43.0> Application ecto started on node nonode@nohost
+2019-12-15 23:40:15.530 [info] <0.43.0> Application ecto_sql started on node nonode@nohost
+2019-12-15 23:40:15.545 [info] <0.43.0> Application cowlib started on node nonode@nohost
+2019-12-15 23:40:15.548 [info] <0.43.0> Application cowboy started on node nonode@nohost
+2019-12-15 23:40:15.550 [info] <0.43.0> Application plug_cowboy started on node nonode@nohost
+2019-12-15 23:40:15.552 [info] <0.43.0> Application phoenix_ecto started on node nonode@nohost
+2019-12-15 23:40:16.011 [info] <0.43.0> Application smart_energy started on node nonode@nohost

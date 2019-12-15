@@ -6,7 +6,8 @@ defmodule SmartEnergy.Devices.DeviceSearchWorker do
 
   require Logger
 
-  alias SmartEnergy.Devices.Models.DevicePing
+  alias SmartEnergy.PubSub
+  alias SmartEnergy.Devices.Models.{ConsumptionUpdate, DevicePing, StatusChange}
   alias SmartEnergy.Devices.DeviceSearchWorker.Backend
 
   @module_name __MODULE__
@@ -47,10 +48,7 @@ defmodule SmartEnergy.Devices.DeviceSearchWorker do
   def xrmq_basic_deliver(payload, rmq_meta, state) do
     new_state =
       with {:ok, device_message} <- Backend.parse(payload, rmq_meta) do
-        %{available_devices: available_devices} = state
-        %DevicePing{device_id: device_id, timestamp: timestamp} = device_message
-        available_devices = Map.put(available_devices, device_id, timestamp)
-        %{state | available_devices: available_devices}
+        actions_based_on_device_message(device_message, state)
       else
         _ ->
           state
@@ -59,5 +57,28 @@ defmodule SmartEnergy.Devices.DeviceSearchWorker do
     rmq_meta.delivery_tag |> xrmq_basic_ack(state) |> xrmq_extract_state()
 
     {:noreply, new_state}
+  end
+
+  defp actions_based_on_device_message(
+         %DevicePing{device_id: device_id, timestamp: timestamp},
+         state
+       ) do
+    %{available_devices: available_devices} = state
+    available_devices = Map.put(available_devices, device_id, timestamp)
+    %{state | available_devices: available_devices}
+  end
+
+  defp actions_based_on_device_message(%ConsumptionUpdate{} = payload, state) do
+    PubSub.publish_device_updates(payload)
+    state
+  end
+
+  defp actions_based_on_device_message(%StatusChange{} = payload, state) do
+    PubSub.publish_device_updates(payload)
+    state
+  end
+
+  defp actions_based_on_device_message(_, state) do
+    state
   end
 end

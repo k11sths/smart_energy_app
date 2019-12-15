@@ -8,17 +8,17 @@ defmodule SmartEnergy.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
+      %{
+        id: Phoenix.PubSub.PG2,
+        start: {Phoenix.PubSub.PG2, :start_link, [:smart_energy_device_pubsub, []]}
+      },
       ExRabbitMQ.Connection.Pool.Supervisor,
       SmartEnergy.Registry,
       SmartEnergy.Repo,
-      # Start the endpoint when the application starts
       SmartEnergyWeb.Endpoint,
       SmartEnergy.Devices.Supervisor,
       SmartEnergy.User.Supervisor,
       SmartEnergy.Devices.DeviceProducer
-      # Starts a worker by calling: SmartEnergy.Worker.start_link(arg)
-      # {SmartEnergy.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
