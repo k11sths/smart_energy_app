@@ -18,13 +18,13 @@ defmodule SmartEnergy.Devices.DeviceProducer do
     end
   end
 
-  def publish(payload, queue) do
-    GenServer.call(@name, {:publish, payload, queue})
+  def publish(payload, reply_to) do
+    GenServer.call(@name, {:publish, payload, reply_to})
   end
 
-  def handle_call({:publish, payload, queue}, _, state) do
+  def handle_call({:publish, payload, reply_to}, _, state) do
     formatted_payload = Poison.encode!(payload, format_keys: :camel_case)
-    res = xrmq_basic_publish(formatted_payload, queue, "", type: "ChangeStatus")
+    res = xrmq_basic_publish(formatted_payload, reply_to, "", type: "ChangeStatus")
 
     {:reply, res, state}
   end

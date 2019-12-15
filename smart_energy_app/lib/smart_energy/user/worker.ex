@@ -50,7 +50,7 @@ defmodule SmartEnergy.User.Worker do
         Map.put(paired_devices, device_id, %{
           consumption: nil,
           status: nil,
-          queue: get_devices_queue()
+          reply_to: get_devices_reply_to()
         })
       else
         paired_devices
@@ -62,16 +62,23 @@ defmodule SmartEnergy.User.Worker do
   def handle_call({:change_device_status, device_id, status}, _, state) do
     %{paired_devices: paired_devices} = state
 
+    # TODO: constants loader for device statuses
+    status =
+      if is_binary(status) do
+        String.to_integer(status)
+      else
+        status
+      end
+
     paired_devices =
       case Map.get(paired_devices, device_id) do
         nil ->
           paired_devices
 
         paired_device_data ->
-          # TODO: constants loader for device statuses
           if DeviceProducer.publish(
                %{message: "UpdateStatus", payload: %{status: status}},
-               paired_device_data.queue
+               paired_device_data.reply_to
              ) === {:ok, false} do
             Map.put(paired_devices, device_id, %{paired_device_data | status: status})
           else
@@ -88,7 +95,13 @@ defmodule SmartEnergy.User.Worker do
   end
 
   def handle_call({:get_device_data, device_id}, _, %{paired_devices: paired_devices} = state) do
-    {:reply, Map.get(paired_devices, device_id), state}
+    device_data =
+      case Map.get(paired_devices, device_id) do
+        nil -> nil
+        device_data -> Map.delete(device_data, :reply_to)
+      end
+
+    {:reply, device_data, state}
   end
 
   def handle_info(
@@ -128,5 +141,5 @@ defmodule SmartEnergy.User.Worker do
     {:noreply, state}
   end
 
-  defp get_devices_queue(), do: get_env(:exrabbitmq, :devices, [])[:devices_queue_in]
+  defp get_devices_reply_to(), do: get_env(:exrabbitmq, :devices, [])[:device_exchange_in]
 end
